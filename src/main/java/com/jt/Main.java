@@ -1,6 +1,8 @@
 package com.jt;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Main {
@@ -47,35 +49,70 @@ public class Main {
     }
 
     public static void addDeposit(Scanner scanner) {
-        System.out.println("Please enter the date (yyyy-MM-dd) of the transaction");
+
+        System.out.println("Please enter the date (yyyy-mm-dd) of the transaction");
         String depositDate = scanner.nextLine();
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = depositDate.format(depositDate, fmt);
+
         System.out.println("Please enter the time (hh:mm:ss) of the transaction");
         String depositTime = scanner.nextLine();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:MM:ss");
+        String formattedTime = depositDate.format(depositTime, fmt);
+
         System.out.println("Please enter the description of the transaction");
         String depositDescription = scanner.nextLine();
+
         System.out.println("Please enter the name of the vendor for the transaction");
         String depositVendor = scanner.nextLine();
+
         System.out.println("Please enter the deposit amount for the transaction");
         double depositAmount = Double.parseDouble(scanner.nextLine());
 
         try {
             FileWriter writer = new FileWriter("transactions.txt", true);
             writer.append("\n" + depositDate + "|" + depositTime + "|" + depositDescription + "|" + depositVendor +
-                    "|" + depositAmount);
+                    "|$-" + depositAmount);
             System.out.println("Deposit added successfully");
             writer.close();
         } catch (IOException e) {
             System.out.println("An error occurred while adding this deposit");
         }
+    }
 
+
+    private static void makePayment(Scanner scanner) {
+        System.out.println("Please enter the date (yyyy-mm-dd) of the transaction");
+        String depositDate = scanner.nextLine();
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = depositDate.format(depositDate, fmt);
+
+        System.out.println("Please enter the time (hh:mm:ss) of the transaction");
+        String depositTime = scanner.nextLine();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("hh:MM:ss");
+        String formattedTime = depositDate.format(depositTime, fmt);
+
+        System.out.println("Please enter the description of the transaction");
+        String depositDescription = scanner.nextLine();
+
+        System.out.println("Please enter the name of the vendor for the transaction");
+        String depositVendor = scanner.nextLine();
+
+        System.out.println("Please enter the debit amount for the transaction");
+        double depositAmount = Double.parseDouble(scanner.nextLine());
+
+        try {
+            FileWriter writer = new FileWriter("transactions.txt", true);
+            writer.append("\n" + depositDate + "|" + depositTime + "|" + depositDescription + "|" + depositVendor +
+                    "|-$" + depositAmount);
+            System.out.println("Deposit added successfully");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while adding this deposit");
+        }
+    }
     }
 }
-
-//    private static void makePayment(Scanner scanner) {
-//        System.out.println("Please enter the description of the transaction you want to pay for");
-//        String userDescription = scanner.nextLine();
-//
-//    }
 //
 //    private static void displayLedger() {
 //        // Read transaction information from CSV file and display it on the screen
@@ -93,5 +130,3 @@ public class Main {
 //            }
 //        }
 //    }
-//
-//
