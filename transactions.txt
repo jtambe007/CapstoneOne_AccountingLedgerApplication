@@ -1,0 +1,24 @@
+date|time|description|vendor|amount
+2023-04-15|10:13:25|ergonomic keyboard|Amazon|-89.50
+2023-04-15|11:15:00|Invoice 1001 paid|Joe|1500.00
+2023-04-17|09:30:00|Coffee machine maintenance|BrewTech|-$200.00
+2023-04-18|13:45:22|Business cards|VistaPrint|-$75.00
+2023-04-20|08:00:00|Monthly internet bill|Comcast|-$80.00
+2023-04-21|14:30:00|Conference registration|Eventbrite|-$350.00
+2023-04-22|09:00:00|Office cleaning|CleanCo|-$150.00
+2023-04-24|12:00:00|Team building event|Escape Room Adventures|-$500.00
+2023-04-26|16:20:10|Payment from client|ABC Company|+$2000.00
+2023-04-29|11:30:00|Office supplies|Staples|-$50.00
+2023-04-30|15:45:00|Monthly accounting services|Smith & Co.|-$500.00
+2023-05-01|09:00:00|Office rent|ABC Realty|-$2000.00
+2023-05-02|11:30:00|Website hosting|Bluehost|$150.00
+2023-05-03|14:00:00|Advertising campaign|Google Ads|-$500.00
+2023-05-04|16:45:00|Business insurance|Allstate|-$300.00
+2023-05-05|09:30:00|Business license renewal|City Hall|$100.00
+2023-05-06|13:15:00|Office equipment maintenance|Best Buy|$250.00
+2023-05-08|10:00:00|Printing services|FedEx|-$50.00
+2023-05-09|14:30:00|Tax consultation|TaxPro|-$200.00
+2023-05-11|16:00:00|Online training subscription|Udemy|-$100.00
+2023-05-12|11:00:00|Meeting catering|Catering Co.|-$250.00
+2023-05-13|15:00:00|Office supplies|Office Depot|-$100.00
+2023-05-15|08:30:00|Electricity bill|Power Co.|-$150.00
