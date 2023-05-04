@@ -1,12 +1,13 @@
 package com.jt;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Main {
+public class Transactions {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //    Home Screen Menu
         String commandInput;
         do {
@@ -22,20 +23,11 @@ public class Main {
 
             // Runs code segment based on user's input
             switch (commandInput) {
-                case "D":
-                    addDeposit(scanner);
-                    break;
-                case "P":
-                    makePayment(scanner);
-                    break;
-                case "L":
-//                    Ledger();
-                    break;
-                case "X":
-                    System.out.println("Exiting the application...");
-                    break;
-                default:
-                    System.out.println("Sorry, the command you entered was not found. Please try again.");
+                case "D" -> addDeposit(scanner);
+                case "P" -> makePayment(scanner);
+                case "L" -> Ledger.ledgerMenu();
+                case "X" -> System.out.println("Exiting the application...");
+                default -> System.out.println("Sorry, the command you entered was not found. Please try again.");
             }
         } while (!commandInput.equals("X"));
     }
@@ -109,3 +101,4 @@ public class Main {
         }
     }
     }
+
