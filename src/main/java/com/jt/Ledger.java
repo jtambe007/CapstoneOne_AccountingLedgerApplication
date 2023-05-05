@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Ledger {
 
+
+
     public static void ledgerMenu() throws IOException {
         //    Home Screen Menu
         String ledgerInput;
@@ -33,8 +35,9 @@ public class Ledger {
                 case "P":
                     displayPayments();
                     break;
-//                case "R":
-//                    break;
+                case "R":
+                    Reports.main(null);
+                    break;
                 case "H":
                   returnHome();
                     break;
@@ -51,7 +54,7 @@ public class Ledger {
         FileReader fileReader = new FileReader("transactions.txt");
         BufferedReader bufReader = new BufferedReader(fileReader);
         String input = bufReader.readLine();
-        while ((input = bufReader.readLine()) != null) {
+        while (input != null) {
             System.out.println(input);
         }
         bufReader.close();
@@ -99,3 +102,4 @@ public class Ledger {
         Transactions.main(null);
     }
 }
+
