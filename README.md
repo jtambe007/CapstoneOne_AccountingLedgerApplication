@@ -23,10 +23,6 @@ switch (commandInput) {
         } while (!commandInput.equals("X"));
 ```
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 ## Development
 
 While creating this project I learnt the importance of putting code in the right place. A few lines of code were often in the wrong place 
